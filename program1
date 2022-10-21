@@ -1,0 +1,18 @@
+import java.util.regex.*;
+public class program1
+{ 
+	public static void main(String[] args) 
+	{      
+		String[] strList = {"The patient should be informed of his therapeutic options. It wouldn't be as if the lone astronaut would be completely by himself.","Now, a writer is entitled to have a Roget on his desk.","Somebody should let you borrow their book.","From the earliest times until about the 1960s","whether we may not, nay ought not, to use a neutral","pronoun relative","phone 9280018281","Notionalplurality","A starting point would be to give more support","abc@gmal.com"};  
+		String[] regList = {".*\\.$",       ".*\\d{10}.*",       ".*@.*",       "\\w+",       ".*\\s.*"};         
+		for (int i = 0; i < regList.length; i++) {  
+			for (int j = 0; j < strList.length; j++) {          
+				boolean b = Pattern.matches(regList[i], strList[j]);         
+				if (b) {          
+					System.out.println("String: " + (j + 1) + " matches regex: " + (i + 1));    
+					}    
+				}    
+			} 
+		}
+	}
+			
